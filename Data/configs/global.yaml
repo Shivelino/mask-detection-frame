@@ -1,0 +1,4 @@
+# 通信队列
+Acq2Gui_src__DEQUE_LEN: 5  # 通信队列: 读取线程 -> Gui原视频窗口线程
+Acq2Inference_net__DEQUE_LEN: 5  # 通信队列: 读取线程 -> Inference线程神经网络部分
+Inference2Gui__DEQUE_LEN: 5  # 通信队列: Inference线程小地图部分 -> Gui小地图窗口线程

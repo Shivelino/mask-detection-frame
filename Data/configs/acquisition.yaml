@@ -1,0 +1,17 @@
+mode: video  # 采集方式。当前支持：hk（海康），dh（大恒），usb（USB相机），video（视频）
+rtsp: rtsp://admin:robomaster2022@192.168.1.64:554/h264/ch1/main/av_stream  # 海康等网络相机rtsp
+sn: ~  # 大恒相机sn码
+id: 0  # USB相机id
+video_path: ../test_video/test_use.avi  # 视频路径
+
+img_mode: bgr  # 图片输出格式/通信队列输出格式
+img_width: 1280  # 相机采集width
+img_height: 720  # 相机采集height
+fps: ~  # 相机采集fps
+exp_time: ~  # （dh）曝光时间
+white_balance: ~  # （dh）白平衡数值（[1,1,1]）如果要填写是括号中的形式
+auto_white_balance: ~  # （dh）自动白平衡
+brightness: ~  # （cv2）亮度
+contrast: ~  # （cv2）对比度
+saturation: ~  # （cv2）饱和度
+display_fps: 20  # video控制fps

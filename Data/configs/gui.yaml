@@ -1,0 +1,7 @@
+src_display_fps: 50  # 原视频播放刷新fps
+src_display_width: 640  # 原视频播放width
+src_display_height: 360  # 原视频播放height
+
+obd_display__fps: 30  # obd窗口的刷新fps
+obd_display_width: 640  # obd窗口width
+obd_display_height: 360  # obd窗口height

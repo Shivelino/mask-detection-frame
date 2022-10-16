@@ -1,0 +1,28 @@
+model_path: ../Data/model/model.onnx  # 模型路径
+device: cpu  # 推理设备
+epoch: 200  # 训练轮数
+batch: 2  # 一次迭代的图片数量
+img_size:  # 模型输入图片size
+  - 640  # width
+  - 640  # height
+lr: 0.001  # 初始学习率
+
+nc: 1  # 网络分类数
+nl: 3  # 特征层层数
+na: 3  # 特征层锚框数
+
+strides:  # 特征层stride，grid_box的大小
+  - 8
+  - 16
+  - 32
+anchors:  # 锚框尺寸
+  - [ [ 10, 13 ] ,  [ 16, 30 ], [ 33, 23 ] ]  # 对应strides，每层的锚框size
+  - [ [ 30, 61 ] ,  [ 62, 45 ] , [ 59, 119 ] ]
+  - [ [ 116, 90 ],  [ 156, 198 ] , [ 373, 326 ] ]  # 注意：这里anchors是原始size，loss和infer中是grid坐标的anchors
+
+loss__box: 0.05  # 位置loss系数
+loss__obj: 1  # 有无物体loss系数
+loss__cls: 0.5  # 分类loss系数
+
+nms__conf_threshold: 0.7  # nms置信度阈值
+nms__iou_threshold: 0.4  # nmsIOU阈值
